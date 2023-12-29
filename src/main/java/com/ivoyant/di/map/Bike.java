@@ -1,4 +1,4 @@
-package com.ivoyant.di;
+package com.ivoyant.di.map;
 
 import java.util.Map;
 

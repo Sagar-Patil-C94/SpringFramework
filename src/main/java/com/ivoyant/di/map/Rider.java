@@ -1,4 +1,4 @@
-package com.ivoyant.di;
+package com.ivoyant.di.map;
 
 public class Rider {
     private Bike bike;

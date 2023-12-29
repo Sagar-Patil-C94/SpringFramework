@@ -5,26 +5,26 @@
        https://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <!--    Using Constructor Args-->
-    <!--    <bean id="bike" class="com.ivoyant.di.Bike">-->
+    <!--    <bean id="bike" class="com.ivoyant.di.map.Bike">-->
     <!--        <property name="name" value="Yamaha"/>-->
     <!--        <property name="cc" value="150"/>-->
     <!--    </bean>-->
-    <!--    <bean id="Virat" class="com.ivoyant.di.Rider">-->
+    <!--    <bean id="Virat" class="com.ivoyant.di.map.Rider">-->
     <!--        <constructor-arg name="bike" ref="bike"/>-->
     <!--        <constructor-arg name="ridderName" value="Virat"/>-->
     <!--    </bean>-->
 
-    <!--    <bean id="Rohit" class="com.ivoyant.di.Rider">-->
+    <!--    <bean id="Rohit" class="com.ivoyant.di.map.Rider">-->
     <!--        <property name="ridderName" value="Rohit"/>-->
     <!--        <property name="bike">-->
-    <!--            <bean class="com.ivoyant.di.Bike">-->
+    <!--            <bean class="com.ivoyant.di.map.Bike">-->
     <!--                <property name="name" value="Pulsar"/>-->
     <!--                <property name="cc" value="200"/>-->
     <!--            </bean>-->
     <!--        </property>-->
     <!--    </bean>-->
 
-    <bean id="bike" class="com.ivoyant.di.Bike">
+    <bean id="bike" class="com.ivoyant.di.map.Bike">
         <property name="name" value="Yamaha"/>
         <property name="bikeDetails">
             <map>
@@ -33,16 +33,16 @@
             </map>
         </property>
     </bean>
-    <bean id="Virat" class="com.ivoyant.di.Rider">
+    <bean id="Virat" class="com.ivoyant.di.map.Rider">
         <constructor-arg name="bike" ref="bike"/>
         <constructor-arg name="ridderName" value="Virat"/>
     </bean>
 
 
-    <bean id="Rohit" class="com.ivoyant.di.Rider">
+    <bean id="Rohit" class="com.ivoyant.di.map.Rider">
         <property name="ridderName" value="Rohit"/>
         <property name="bike">
-            <bean class="com.ivoyant.di.Bike">
+            <bean class="com.ivoyant.di.map.Bike">
                 <property name="name" value="Pulsar"/>
                 <property name="bikeDetails">
                     <map>

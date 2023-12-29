@@ -1,0 +1,31 @@
+<?xml version = "1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="sem" class="com.ivoyant.di.nonstringmap.Sem">
+        <property name="sem" value="7"/>
+    </bean>
+    <bean id="section" class="com.ivoyant.di.nonstringmap.Section">
+        <property name="section" value="B"/>
+    </bean>
+
+    <bean id="Virat" class="com.ivoyant.di.nonstringmap.Students">
+        <constructor-arg name="name" value="Virat"/>
+        <constructor-arg name="clsDetails">
+            <map>
+                <entry key-ref="sem" value-ref="section"/>
+            </map>
+        </constructor-arg>
+    </bean>
+
+    <bean id="Rohit" class="com.ivoyant.di.nonstringmap.Students">
+        <property name="name" value="Rohit"/>
+        <property name="clsDetails">
+            <map>
+                <entry key-ref="sem" value-ref="section"/>
+            </map>
+        </property>
+    </bean>
+</beans>

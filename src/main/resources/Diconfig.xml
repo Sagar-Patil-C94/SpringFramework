@@ -4,13 +4,23 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
        https://www.springframework.org/schema/beans/spring-beans.xsd">
 
+    <!--    Using Constructor Args-->
     <bean id="bike" class="com.ivoyant.di.Bike">
         <property name="name" value="Yamaha"/>
         <property name="cc" value="150"/>
     </bean>
-
     <bean id="Virat" class="com.ivoyant.di.Rider">
         <constructor-arg name="bike" ref="bike"/>
         <constructor-arg name="ridderName" value="Virat"/>
+    </bean>
+
+    <bean id="Rohit" class="com.ivoyant.di.Rider">
+        <property name="ridderName" value="Rohit"/>
+        <property name="bike">
+            <bean class="com.ivoyant.di.Bike">
+                <property name="name" value="Pulsar"/>
+                <property name="cc" value="200"/>
+            </bean>
+        </property>
     </bean>
 </beans>

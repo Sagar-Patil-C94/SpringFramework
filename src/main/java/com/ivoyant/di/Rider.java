@@ -8,6 +8,9 @@ public class Rider {
         this.bike = bike;
     }
 
+    public Rider() {
+    }
+
     @Override
     public String toString() {
         return "Rider{" +

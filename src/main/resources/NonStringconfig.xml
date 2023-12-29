@@ -23,6 +23,14 @@
     <bean id="Rohit" class="com.ivoyant.di.nonstringmap.Students">
         <property name="name" value="Rohit"/>
         <property name="clsDetails">
+            <!--            If Collection is List        -->
+            <!--            <list>-->
+            <!--                <value></value>-->
+            <!--            </list>-->
+            <!--            If Collection Is Set-->
+            <!--            <set>-->
+            <!--                <value></value>-->
+            <!--            </set>-->
             <map>
                 <entry key-ref="sem" value-ref="section"/>
             </map>
